@@ -6,6 +6,7 @@ const links = [
     {name: 'Home', href: "/"},
     {name: 'Trips', href: "/trips"},
     {name: 'Login', href: "/login"},
+    {name: 'Sign Up', href: "/sign-up"},
 ]
 
 export default function Header() {
@@ -16,7 +17,9 @@ export default function Header() {
             {
                 links.map(
                     link => (
-                        <Link key={link.name} href={link.href} className='flex bg-white rounded-lg w-20 justify-center items-center text-red-400 h-10  font-bold'>{link.name}</Link>
+                        <Link key={link.name} href={link.href} className='flex bg-white rounded-lg w-40 justify-center items-center text-red-400 h-10  font-bold'>
+                            {link.name}
+                        </Link>
                     )
                 )
             }
